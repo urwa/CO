@@ -411,7 +411,7 @@
     }
 
     $(document).ready(function () {
-
+        console.log("check1");
         // Product size field show/hide
         $('input:radio[name=category]').click(function () {
             var catVal = $(this).attr("value");
@@ -421,7 +421,7 @@
         });
 
         // Product condition field show/hide
-        $('input:radio[name=condition]').click(function () {
+        $('input:radio[name=condition]').click(function () { console.log("check2");
             var condVal = $(this).attr("value");
             if (condVal == "new") {
                 $(".fview").hide();
@@ -540,7 +540,7 @@
             fr.readAsDataURL(file);
         });
 
-        form.addEventListener('submit', e => {
+        form.addEventListener('submit', e => { console.log("check3");
             e.preventDefault();
             var formData = new FormData(form);
             for (var pair of formData.entries()) {
