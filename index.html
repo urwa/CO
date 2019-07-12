@@ -188,13 +188,13 @@
                     <div class="form-group">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="originalbox" value="yes" id="id-originalbox-yes" required>
+                                <input type="radio" name="originalbox" value="yes" id="id-originalbox-yes">
                                 Yes
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="originalbox" value="no" id="id-originalbox-no" required>
+                                <input type="radio" name="originalbox" value="no" id="id-originalbox-no">
                                 No
                             </label>
                         </div>
@@ -208,13 +208,13 @@
                     <div class="form-group">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="cleaning" value="yes" id="id-cleaning-yes" required>
+                                <input type="radio" name="cleaning" value="yes" id="id-cleaning-yes">
                                 Yes
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="cleaning" value="no" id="id-cleaning-no" required>
+                                <input type="radio" name="cleaning" value="no" id="id-cleaning-no">
                                 No
                             </label>
                         </div>
@@ -282,7 +282,7 @@
                 <fieldset>
                     <legend>Net Price</legend>
                     <div class="form-group">
-                        <input id="id-netprice" type="text" name="netprice" class="form-control" required readonly>
+                        <input id="id-netprice" type="text" name="netprice" class="form-control" readonly>
                     </div>
                 </fieldset>
 
@@ -411,7 +411,7 @@
     }
 
     $(document).ready(function () {
-        console.log("check1");
+
         // Product size field show/hide
         $('input:radio[name=category]').click(function () {
             var catVal = $(this).attr("value");
@@ -421,7 +421,7 @@
         });
 
         // Product condition field show/hide
-        $('input:radio[name=condition]').click(function () { console.log("check2");
+        $('input:radio[name=condition]').click(function () {
             var condVal = $(this).attr("value");
             if (condVal == "new") {
                 $(".fview").hide();
@@ -540,7 +540,7 @@
             fr.readAsDataURL(file);
         });
 
-        form.addEventListener('submit', e => { console.log("check3");
+        form.addEventListener('submit', e => {
             e.preventDefault();
             var formData = new FormData(form);
             for (var pair of formData.entries()) {
